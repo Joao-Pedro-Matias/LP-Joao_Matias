@@ -155,9 +155,21 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    ```mermaid
    flowchart TD
       Start(( Início)) --> number[\ Número \]
-      number --> operation[ N! ]
-      operation --> result[/ Resultado /]
+      number --> verification{n ∈ N and n>1}
+      verification --> |Não| verification1{n=1 or n=0}
+      verification1 --> |Sim| result[/ Resultado=1 /]
+      verification1 --> |Não| result1[/ Número não pertence<br>aos números naturais/]
+      
+      verification --> |Sim| operation[x=n]
+      operation --> verification2{n=2}
+      verification2 --> |Sim| result2[/ Resultado=x /]
+      verification2 --> |Não| operation3[n--]
+      operation3 --> operation2[x=n*x]
+      operation2 --> verification2
+      
       result --> finish([Fim])
+      result1 --> finish
+      result2 --> finish
    ```
    
 9. Elabore um fluxograma para verificar se um número digitado pelo usuário é par.
