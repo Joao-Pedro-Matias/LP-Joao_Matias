@@ -21,7 +21,6 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
     ```mermaid
    
     flowchart TD
-         TESTE
         start(( Início )) --> input[\ Digite sua Nota \]
         input --> verification{ Nota >= 50? }
         verification --> |Sim| A[/ Aprovado /]
@@ -101,6 +100,7 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
       verification2 --> |Não| result3[/ o número 2 é maior/]
       result1 --> finish([Fim])
       result2 --> finish
+      result3 --> finish
 
    
    ```
@@ -112,16 +112,42 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
       start(( Inicío)) --> number1[\ Número 1 \]
       number1 --> number2[\ Número 2 \]
       number2 --> number3[\ Número 3 \]
-      number3 --> verification1{ N1 > N2} 
-      verification1 --> |Sim| verification2{ N1 > N2 }
-      verification1 --> |Não| verification3{ N2 < N3 }
-      verification2 --> |Sim| result1[/ O número 1 é o maior /]
-      verification2 --> |Não| result3[/ O número 3 é o maior /]
-      verification3 --> |Sim| result3
-      verification3 --> |Não| result2[/ O número 2 é o maior /]
-      result1 --> finish([Fim])
+      number3 --> verification{N1=N2 or N1=N3<br> or N2=N3}
+
+      verification --> |Sim| verification1{N1=N2 and N1=N3}
+      verification1 --> |Sim| result[/ Todos os números são iguais /]
+      verification1 --> |Não| verification2{N1=N2}
+      
+      verification2 --> |Sim| verification3{N1>N3}
+      verification3 --> |Sim| result1[/ O número 1 e o número 2 são os maiores /]
+      verification3 --> |Não| result6[/ O número 3 é o maior /]
+
+      verification2 --> |Não| verification4{N1=N3}      
+      verification4 --> |Sim| verification5{N1>N2}
+      verification5 --> |Sim| result2[/ O número 1 e o número 3 são os maiores /]
+      verification5 --> |Não| result5[/ O número 2 é o maior /]
+
+      verification4 --> |Não| verification6{N2>N1}
+      verification6 --> |Sim| result3[/ O número 2 e o número 3 são os maiores /]
+      verification6 --> |Não| result4[/ O número 1 é o maior /]
+      
+   
+      verification --> |Não| verification7{N1>N2 and N1>N3}
+      verification7 --> |Sim| result7[/ O número 1 é o maior /]
+      verification7 --> |Não| verification8{N2>N3}
+      verification8 --> |Sim| result8[/ O número 2 é o maior /]
+      verification8 --> |Não| result9[/ O número 3 é o maior /]
+      
+      result --> finish([Fim])
+      result1 --> finish
       result2 --> finish
       result3 --> finish
+      result4 --> finish
+      result5 --> finish
+      result6 --> finish
+      result7 --> finish
+      result8 --> finish
+      result9 --> finish
    ```
    
 8. Construa um fluxograma para calcular o fatorial de um número fornecido pelo usuário.
