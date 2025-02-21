@@ -21,6 +21,7 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
     ```mermaid
    
     flowchart TD
+         TESTE
         start(( Início )) --> input[\ Digite sua Nota \]
         input --> verification{ Nota >= 50? }
         verification --> |Sim| A[/ Aprovado /]
