@@ -183,11 +183,16 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    ```mermaid
    flowchart TD
       start(( Início )) --> number[\ Número \]
-      number --> operation[ N % 2]
-      operation --> verification{ Resultado = 1 }
-      verification --> |Sim| result1[/ Número Ímpar /]
-      verification --> |Não| result2[/ Número Par /]
-      result1 --> finish([ Fim ])
+      number --> verification{ N ∈ Z}
+      verification --> |Não| result[/Número não pertence aos números inteiros/] 
+      
+      verification --> |Sim| operation[ N % 2]
+      operation --> verification1{ Resultado = 1 }
+      verification1 --> |Sim| result1[/ Número Ímpar /]
+      verification1 --> |Não| result2[/ Número Par /]
+
+      result --> finish([ Fim ])
+      result1 --> finish
       result2 --> finish
 
    ```
@@ -197,19 +202,28 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    ```mermaid
    flowchart TD
       start(( Início )) --> number[\ Número \]
-      number -->  verification{ N=2 }
-      verification --> |Sim| result1[/ Número primo /]
-      verification --> |Não| operation[ N : 2 = x ]
-      operation --> verification2{x ∈ Z}
-      verification2 --> |Sim| result2[/ Número não é primo /]
-      verification2 --> |Não| operation1[x + .5 = x]
-      operation1 --> operation2[ x-- ]
-      operation2 --> verification3{  N : x = Z}
+      number --> verification{n ∈ N}      
+      verification --> |Não| result[/Não pertence aos números naturais/]
+
+      verification --> |Sim| verification1{n=0 or n=1}
+      verification1 --> |Sim| result2[/ Número não é primo /]
+      verification1 --> |Não| verification2{ N=2 }
+      
+      
+      verification2 --> |Sim| result1[/ Número primo /]
+      verification2 --> |Não| operation[ N : 2 = x ]
+      operation --> verification3{x ∈ Z}
       verification3 --> |Sim| result2
-      verification3 --> |Não| verification4{ x = 3 }
-      verification4 --> |Sim| result1
-      verification4 --> |Não| operation2
-      result1 --> finish([ Fim ])
+      verification3 --> |Não| operation1[x + .5 = x]
+      operation1 --> operation2[ x-- ]
+      operation2 --> verification4{  N : x ∈ Z}
+      verification4 --> |Sim| result2
+      verification4 --> |Não| verification5{ x = 3 }
+      verification5 --> |Sim| result1
+      verification5 --> |Não| operation2
+      
+      result --> finish([ Fim ])
+      result1 --> finish
       result2 --> finish
     
    
