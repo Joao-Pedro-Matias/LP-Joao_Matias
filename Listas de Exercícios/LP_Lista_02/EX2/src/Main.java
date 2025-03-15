@@ -12,7 +12,9 @@ public class Main {
         n1 = in.nextDouble();
         result = n1*2;
 
-        System.out.println("O dobro de " + n1 + " é: " + result);
+        System.out.println("O dobro de " + n1 + " é: " + result );
+
+        System.out.println("Teste");
 
     }
 }
