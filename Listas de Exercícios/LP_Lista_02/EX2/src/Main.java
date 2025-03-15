@@ -14,7 +14,8 @@ public class Main {
 
         System.out.println("O dobro de " + n1 + " é: " + result );
 
-        System.out.println("Teste");
+        System.out.println("Teste2");
+
 
     }
 }
