@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Listas de Exercícios/LP_Lista_02/EX2/EX2.iml" filepath="$PROJECT_DIR$/Listas de Exercícios/LP_Lista_02/EX2/EX2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/LP-Joao_Matias.iml" filepath="$PROJECT_DIR$/.idea/LP-Joao_Matias.iml" />
     </modules>
   </component>
