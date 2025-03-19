@@ -8,11 +8,12 @@ public class Main {
         double n1;
         double result;
 
-        System.out.println("Digite um número:");
+        System.out.println("Digite a velocidade em Km/h: ");
         n1 = in.nextDouble();
-        result = n1*n1;
 
-        System.out.println("O quadrado de " + n1 + " é: " + result );
+        result = n1/3.6;
+
+        System.out.println("A velocidade em m/s é : " + result );
 
     }
 }

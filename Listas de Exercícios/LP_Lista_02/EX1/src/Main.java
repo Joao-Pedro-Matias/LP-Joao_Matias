@@ -10,9 +10,9 @@ public class Main {
 
         System.out.println("Digite um número:");
         n1 = in.nextDouble();
-        result = n1*n1;
+        result = n1*2;
 
-        System.out.println("O quadrado de " + n1 + " é: " + result );
+        System.out.println("O dobro de " + n1 + " é: " + result );
 
     }
 }
