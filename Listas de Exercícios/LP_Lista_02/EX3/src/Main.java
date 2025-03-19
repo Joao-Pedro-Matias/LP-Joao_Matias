@@ -10,9 +10,9 @@ public class Main {
 
         System.out.println("Digite um número:");
         n1 = in.nextDouble();
-        result = n1*n1;
+        result = n1/5;
 
-        System.out.println("O quadrado de " + n1 + " é: " + result );
+        System.out.println("A quinta parte de " + n1 + " é: " + result );
 
     }
 }
