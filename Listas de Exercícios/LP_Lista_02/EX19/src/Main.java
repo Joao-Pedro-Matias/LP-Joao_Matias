@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.lang.Math
+import java.lang.Math;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,8 +26,10 @@ public class Main {
         delta = b*b - 4*a*c;
         delta = Math.pow(delta, 0.5);
 
-        result1 = (-b + delta) / 2*a;
-        result2 = (-b - delta) / 2*a;
+        System.out.println("Delta: " + delta);
+
+        result1 = (-b + delta) / (2*a);
+        result2 = (-b - delta) / (2*a);
 
         System.out.println("O primeiro resultado é: " + result1);
         System.out.println("O segundo resultado é: " + result2);

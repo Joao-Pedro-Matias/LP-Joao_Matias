@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.lang.Math
 
 public class Main {
     public static void main(String[] args) {
@@ -10,8 +9,6 @@ public class Main {
         double n2;
         double result1;
         double result2;
-        double result3;
-
 
         System.out.println("Escreva a primeira raiz: ");
         n1 = in.nextDouble();
@@ -19,9 +16,10 @@ public class Main {
         System.out.println("Escreva a segunda raiz: ");
         n2 = in.nextDouble();
 
+        result1 = n1 + n2;
+        result2 = n1 * n2;
 
-        System.out.println("O primeiro resultado é: " + result1);
-        System.out.println("O segundo resultado é: " + result2);
+        System.out.println("O fórmula é: x² + " + -result1 + "x + " + result2);
 
     }
 }
