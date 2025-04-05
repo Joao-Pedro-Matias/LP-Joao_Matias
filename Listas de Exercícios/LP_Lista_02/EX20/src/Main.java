@@ -19,7 +19,7 @@ public class Main {
         result1 = n1 + n2;
         result2 = n1 * n2;
 
-        System.out.println("O fórmula é: x² + " + -result1 + "x + " + result2);
+        System.out.println("O fórmula é: x² + " + -result1 + "x + " + -result2 + " = 0");
 
     }
 }
