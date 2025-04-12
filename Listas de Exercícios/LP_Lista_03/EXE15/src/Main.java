@@ -10,7 +10,7 @@ public class Main {
 
         change = 0;
 
-        System.out.println("Insira o dinheiro:");
+        System.out.println("Insira o dinheiro: R$");
         money = in.nextDouble();
 
         if (money<0.5) System.out.println("Dinheiro insuficiente");
@@ -19,31 +19,31 @@ public class Main {
                 System.out.println("------------------------------" +
                         "\nMENU:" +
                         "\n1. Café Expresso R$ 0,50" +
-                        "\n ------------------------------");
+                        "\n------------------------------");
             }
             else if (money<2) {
                 System.out.println("------------------------------" +
                         "\nMENU:" +
                         "\n1. Café Expresso R$ 0,50" +
-                        "\n1. Café Longo R$ 1,00" +
-                        "\n ------------------------------");
+                        "\n2. Café Longo R$ 1,00" +
+                        "\n------------------------------");
             }
             else if (money<2.5) {
                 System.out.println("------------------------------" +
                         "\nMENU:" +
                         "\n1. Café Expresso R$ 0,50" +
-                        "\n1. Café Longo R$ 1,00" +
+                        "\n2. Café Longo R$ 1,00" +
                         "\n3. Chocolate R$ 2,00" +
-                        "\n ------------------------------");
+                        "\n------------------------------");
             }
             else {
                 System.out.println("------------------------------" +
-                                "\nMENU:" +
-                                "\n1. Café Expresso R$ 0,50" +
-                                "\n1. Café Longo R$ 1,00" +
-                                "\n3. Chocolate R$ 2,00" +
-                                "\n4. Cappuciono R$ 2,50" +
-                        "\n ------------------------------");
+                        "\nMENU:" +
+                        "\n1. Café Expresso R$ 0,50" +
+                        "\n2. Café Longo R$ 1,00" +
+                        "\nn3. Chocolate R$ 2,00" +
+                        "\n4. Cappuciono R$ 2,50" +
+                        "\n------------------------------");
             }
 
             System.out.println("Escolha uma opção");
@@ -53,26 +53,32 @@ public class Main {
             switch (option) {
                 case 1:
                     System.out.println("Bebida selecionada: Café Expresso");
-                    change = money - 0.5;
+                    if(money>=0.5) change = money - 0.5;
+                    else System.out.println("Saldo Insuficiente");
                     break;
                 case 2:
                     System.out.println("Bebida selecionada: Café Longo");
-                    change = money - 1;
+                    if(money>=1) change = money - 1;
+                    else System.out.println("Saldo Insuficiente");
                     break;
                 case 3:
                     System.out.println("Bebida selecionada: Chocolate");
-                    change = money - 2;
+                    if(money>=2) change = money - 2;
+                    else System.out.println("Saldo Insuficiente");
                     break;
                 case 4:
                     System.out.println("Bebida selecionada: Capuccino");
-                    change = money - 2.5;
+                    if(money>=2.5) change = money - 2.5;
+                    else System.out.println("Saldo Insuficiente");
                     break;
                 default:
                     System.out.println("Opção Inválida");
                     break;
             }
 
-            System.out.println("Seu troco: " + change);
+            System.out.println("------------------------------" +
+                    "\nSeu troco: R$" +  String.format("%.2f", change) +
+                    "\n------------------------------");
 
         }
 
