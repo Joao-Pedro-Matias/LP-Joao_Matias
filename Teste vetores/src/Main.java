@@ -8,14 +8,14 @@ public class Main {
         int [] numbers = {0,6,5,2,1};
 
         for(int i=0; i<numbers.length; i++)
-            System.out.println(numbers[i]);
+            System.out.print(numbers[i]);
 
-        System.out.println("         ---------");
+        System.out.println("\n         ---------");
 
         for(int pointer:numbers)
-            System.out.println(pointer);
+            System.out.print(pointer);
 
-        System.out.println("----------------------------------");
+        System.out.println("\n----------------------------------");
 
         int [][] matriz1 = new int[4] [2];
 
