@@ -7,6 +7,7 @@ public class Main {
 
         int n1, n2, n3, n4, n5, bigger, smaller;
         bigger=0;
+        smaller=0;
 
         System.out.println("Digite 5 números separados por espaço");
         n1 = in.nextInt();
@@ -15,7 +16,7 @@ public class Main {
         n4 = in.nextInt();
         n5 = in.nextInt();
 
-        for(int i=0; i>bigger; i++){
+        for(int i=0; i<=bigger; i++){
             if (n1>i) bigger=n1;
             if (n2>i) bigger=n2;
             if (n3>i) bigger=n3;
@@ -24,7 +25,17 @@ public class Main {
 
         }
 
-        System.out.println("O maior número é:" + bigger);
+        for(int i=bigger; i>=smaller; i--){
+            if (n1<i) smaller=n1;
+            if (n2<i) smaller=n2;
+            if (n3<i) smaller=n3;
+            if (n4<i) smaller=n4;
+            if (n5<i) smaller=n5;
+
+        }
+
+        System.out.println("O maior número é: " + bigger);
+        System.out.println("O menor número é: " + smaller);
 
     }
 }

@@ -10,14 +10,13 @@ public class Main {
         System.out.println("Digite um numero");
         n = in.nextInt();
 
-        System.out.println("Fatorial de " + n + " é:");
 
-        while (n>1) {
-            fatorial*=n;
-            n--;
-        }
+        for(int i=n; i>1; i--)
+            fatorial = i * fatorial;
 
-        System.out.println(fatorial);
+        System.out.println("Fatorial de " + n + " é: " + fatorial);
+
+
 
     }
 }
