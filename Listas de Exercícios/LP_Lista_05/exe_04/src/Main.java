@@ -15,6 +15,7 @@ public class Main {
             System.out.println("Digite o " + (i+1) + "° número");
             numbers[i] = in.nextInt();
         }
+
         for (int i=0; i<numbers.length; i++ ) {
             if (numbers[i]>bigger) {
                 bigger = numbers[i];
