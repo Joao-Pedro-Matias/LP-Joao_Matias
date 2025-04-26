@@ -38,9 +38,9 @@ public class Main {
         System.out.println("         ---------");
 
         for( int [] linha:matriz2){
-            for(int coluna:linha) System.out.print(coluna + " ");
+            for(int coluna:linha)
+                System.out.print(coluna + " ");
             System.out.print("\n");
-
         }
 
 
