@@ -21,11 +21,11 @@ public class Main {
             line = 0;
         }
         System.out.println("A maior linha é a linha " + (linePointer+1) + " com o valor = " + lineBigger);
-
+        lineBigger =0;
 
         for (int i=0; i<numbers.length; i++){
             for (int j=0; j<numbers[1].length; j++){
-                line = line + numbers[j][i];
+                line += numbers[j][i];
                 if (line>lineBigger){
                     lineBigger = line;
                     linePointer = i;

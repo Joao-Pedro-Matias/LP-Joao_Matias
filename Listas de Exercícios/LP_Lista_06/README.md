@@ -1,4 +1,4 @@
-![senai_logo](https://transparencia.sp.senai.br/Content/img/logo-senai.png)
+   ![senai_logo](https://transparencia.sp.senai.br/Content/img/logo-senai.png)
 
 # Lista de Exercícios 06: Funções e Recursividade. 
 

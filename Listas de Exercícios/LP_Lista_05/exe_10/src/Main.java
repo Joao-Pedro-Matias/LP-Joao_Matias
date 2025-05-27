@@ -15,7 +15,7 @@ public class Main {
         n3 = matriz1[1] [0] * matriz2 [0] [0] + matriz1[1] [1] * matriz2 [1] [0];
         n4 = matriz1[1] [0] * matriz2 [0] [1] + matriz1[1] [1] * matriz2 [1] [1];
         n5 = matriz1[2] [0] * matriz2 [0] [0] + matriz1[2] [1] * matriz2 [1] [0];
-        n6 = matriz1[2] [0] * matriz2 [0] [1] + matriz1[1] [1] * matriz2 [1] [1];
+        n6 = matriz1[2] [0] * matriz2 [0] [1] + matriz1[2] [1] * matriz2 [1] [1];
 
         System.out.println( n1 + " " + n2 + "\n" +
                             n3 + " " + n4 + "\n" +
