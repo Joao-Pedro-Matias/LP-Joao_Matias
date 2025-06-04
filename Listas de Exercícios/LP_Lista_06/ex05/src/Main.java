@@ -19,7 +19,9 @@ public class Main {
 
     }
 
-    public static int findNumber(int [] numbers, int n, int len, int aux) {
+    public static int findNumber(int [] numbers, int n, int min, int max) {
+
+        len
 
         if (n == numbers[len/2+aux]) return len/2+aux;
         if (n>numbers[len/2+aux] && n<numbers[len/2+aux]) return -1;
