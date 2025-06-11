@@ -12,27 +12,24 @@ public class Main {
         System.out.println("Digite o número a ser buscado: ");
         n = in.nextInt();
 
-        int result = findNumber(numbers, n, numbers.length,0);
+        int result = findNumber(numbers, n, 0,numbers.length-1, 0);
 
-        System.out.println(result);
-        System.out.println(numbers[result]);
+        if (result == -1) System.out.println("Não foi encontrado esse número no vetor");
+        else System.out.println("Foi encontrado o numero " + numbers[result] + " na casa " + result);
+
 
     }
 
-    public static int findNumber(int [] numbers, int n, int min, int max) {
+    public static int findNumber(int [] numbers, int n, int min, int max, int mid) {
 
-        len
-
-        if (n == numbers[len/2+aux]) return len/2+aux;
-        if (n>numbers[len/2+aux] && n<numbers[len/2+aux]) return -1;
+        mid = (max + min) / 2;
+        if (n == numbers[mid]) return mid;
+        if (min >= max) return -1;
         else {
-            if (n > numbers[len/2+aux]) {
-                aux += len/2;
-                len /= 2;
-            }
-            else
-                len /= 2;
-            return findNumber(numbers, n,len,aux);
+            if (n > numbers[mid]) min = mid+1;
+            else max = mid-1;
+
+            return findNumber(numbers, n,min,max,mid);
         }
     }
 }
