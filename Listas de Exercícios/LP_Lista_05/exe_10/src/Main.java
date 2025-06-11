@@ -15,6 +15,12 @@ public class Main {
                 for (int k = 0; k <2; k++)
                     result[i][j] += matriz1[i][k] * matriz2 [k][j];
 
+        for (int i=0; i<3; i++) {
 
+            for (int j = 0; j<2; j++)
+                System.out.printf(result[i][j] + " ");
+
+            System.out.println("");
+        }
     }
 }
